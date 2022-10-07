@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import java.math.BigDecimal;
 
 @RestController
 public class MyController {
@@ -18,7 +19,7 @@ public class MyController {
     }
 
     @GetMapping("/calculate")
-    public String calculationVacation(@RequestParam double avgSalary, @RequestParam String start, @RequestParam String end) {
+    public BigDecimal calculationVacation(@RequestParam BigDecimal avgSalary, @RequestParam String start, @RequestParam String end) {
         CalculateDTO calculateDTO = new CalculateDTO(avgSalary, start, end);
         return calculateService.calculateVocationPay(calculateDTO);
     }

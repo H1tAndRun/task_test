@@ -1,22 +1,24 @@
 package com.anton.spring_boot.task_test.dto;
 
+import java.math.BigDecimal;
+
 public class CalculateDTO {
 
-    private double avgSalary;
+    private BigDecimal avgSalary;
     private String startDate;
     private String endDate;
 
-    public CalculateDTO(double avgSalary, String startDate, String endDate) {
+    public CalculateDTO(BigDecimal avgSalary, String startDate, String endDate) {
         this.avgSalary = avgSalary;
         this.startDate = startDate;
         this.endDate = endDate;
     }
 
-    public double getAvgSalary() {
+    public BigDecimal getAvgSalary() {
         return avgSalary;
     }
 
-    public void setAvgSalary(double avgSalary) {
+    public void setAvgSalary(BigDecimal avgSalary) {
         this.avgSalary = avgSalary;
     }
 
